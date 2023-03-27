@@ -1,0 +1,40 @@
+.test {
+   height: 100vh;
+   overflow-y: scroll;
+   scroll-behavior: smooth;
+}
+.test div {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.test div:nth-child(1) {
+   background-color: yellowgreen;
+   width: 400px;
+   height: 300px;
+}
+.test div:nth-child(3) {
+   background-color: rgb(50, 117, 205);
+   width: 400px;
+   height: 300px;
+}
+.test div:nth-child(5) {
+   background-color: rgb(50, 117, 205);
+   width: 400px;
+   height: 300px;
+}
+.test div:nth-child(7) {
+   background-color: rgb(50, 117, 205);
+   width: 400px;
+   height: 300px;
+}
+.test div:nth-child(9) {
+   background-color: rgb(50, 117, 205);
+   width: 400px;
+   height: 300px;
+}
+.test div:nth-child(11) {
+   background-color: rgb(50, 117, 205);
+   width: 400px;
+   height: 300px;
+}

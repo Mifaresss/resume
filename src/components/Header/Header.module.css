@@ -1,0 +1,21 @@
+.header {
+	font-size: 20px;
+	position: fixed;
+	width: 100%;
+	padding: 20px 0;
+	background-color: var(--general-background-c-alpha-channel);
+	backdrop-filter: blur(3px);
+}
+.nav {
+	display: flex;
+	justify-content: center;
+}
+.navList {
+	min-width: 800px;
+	display: flex;
+	justify-content: space-between;
+}
+.active {
+	color: var(--active-c);
+	text-decoration: underline;
+}
