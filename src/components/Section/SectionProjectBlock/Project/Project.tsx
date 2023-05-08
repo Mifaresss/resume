@@ -33,7 +33,8 @@ export function Project({ id, imageSrc, projectTitle, projectDescription, techno
 	return (
 		<div className={s.project}>
 			<div onMouseEnter={() => mouseEnterHandler(id)} onMouseLeave={() => mouseLeaveHandler(id)} className={s.wrapperImage}>
-				<Image className={s.projectImage} src={img} width={333} height={188} alt='' />
+				{/* <Image className={s.projectImage} src={img} width={333} height={188} alt='' /> */}
+				<img className={s.projectImage} src={img} width='333' height='188' alt='' />
 				<Link className={s.projectLink} href={src} target='_blank'>
 					{isSmallScreen ? 'See more' : projectTitle}
 				</Link>
