@@ -14,12 +14,12 @@ export const mainData: MainPropsType['mainData'] = [
       description:
          'Here are the main technologies I am proficient in (without various additional ones such as Sass, Git, etc.):',
       images: [
-         { id: 1, src: '/images/tehnologies/html.svg' },
-         { id: 2, src: '/images/tehnologies/css.svg' },
-         { id: 3, src: '/images/tehnologies/javascript.svg' },
-         { id: 4, src: '/images/tehnologies/react.svg' },
-         { id: 5, src: '/images/tehnologies/nextjs.svg' },
-         { id: 6, src: '/images/tehnologies/ts.svg' },
+         { id: 1, src: '/images/html.svg' },
+         { id: 2, src: '/images/css.svg' },
+         { id: 3, src: '/images/javascript.svg' },
+         { id: 4, src: '/images/react.svg' },
+         { id: 5, src: '/images/nextjs.svg' },
+         { id: 6, src: '/images/ts.svg' },
       ],
    },
    {
@@ -53,7 +53,7 @@ export const mainData: MainPropsType['mainData'] = [
       sliderData: [
          {
             id: 1,
-            imageSrc: '/images/projects/todo-list.jpg',
+            imageSrc: '/images/todo-list.jpg',
             projectTitle: 'Todo List',
             projectDescription: 'This is my version of a React-based Todo list.',
             technologies: [
@@ -64,7 +64,7 @@ export const mainData: MainPropsType['mainData'] = [
          },
          {
             id: 2,
-            imageSrc: '/images/projects/friends-app.jpg',
+            imageSrc: '/images/friends-app.jpg',
             projectTitle: 'Friends App',
             projectDescription:
                'This is a simple social app that allows find, filter and sort users by various parameters.',
@@ -76,7 +76,7 @@ export const mainData: MainPropsType['mainData'] = [
          },
          {
             id: 3,
-            imageSrc: '/images/projects/memory-game.jpg',
+            imageSrc: '/images/memory-game.jpg',
             projectTitle: 'Memory Game',
             projectDescription: 'Above is a memory game with a theme switching feature.',
             technologies: [
@@ -87,7 +87,7 @@ export const mainData: MainPropsType['mainData'] = [
          },
          {
             id: 4,
-            imageSrc: '/images/projects/form.jpg',
+            imageSrc: '/images/form.jpg',
             projectTitle: 'Translate doc (form)',
             projectDescription:
                'This is an HTML form application where I paid special attention to a11y (accessibility).',
