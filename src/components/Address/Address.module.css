@@ -1,0 +1,33 @@
+.address {
+   /* display: flex;
+	justify-content: center;
+	align-items: center; */
+   display: grid;
+   grid-template-columns: 1fr auto 1fr;
+   align-items: center;
+	justify-content: center;
+   gap: 10px;
+   position: fixed;
+   z-index: 1;
+   bottom: 0;
+   width: 100%;
+   padding: 10px 0;
+   font-size: 1.25rem;
+	color: rgb(var(--beta-c));
+
+   background-color: rgba(var(--general-background-c), var(--alpha-channel-c));
+   backdrop-filter: blur(0.3rem);
+}
+.address hr {
+   width: 1px;
+   height: 26px;
+   background-color: rgb(var(--alpha-c));
+}
+
+.linkWrapper:nth-child(1) {
+	display: flex;
+	justify-content: flex-end;
+}
+.linkWrapper a {
+   
+}

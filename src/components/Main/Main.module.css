@@ -1,40 +1,15 @@
-.test {
-   height: 100vh;
-   overflow-y: scroll;
-   scroll-behavior: smooth;
+.mainContainer {
+   padding-top: calc(40px + 16 * ((100vw - 320px) / (1280 - 320)));
+   padding-bottom: 8rem;
+   display: grid;
+   grid-template: auto / 47% 45%;
+   justify-content: space-between;
+   grid-gap: 3.75rem;
 }
-.test div {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-.test div:nth-child(1) {
-   background-color: yellowgreen;
-   width: 400px;
-   height: 300px;
-}
-.test div:nth-child(3) {
-   background-color: rgb(50, 117, 205);
-   width: 400px;
-   height: 300px;
-}
-.test div:nth-child(5) {
-   background-color: rgb(50, 117, 205);
-   width: 400px;
-   height: 300px;
-}
-.test div:nth-child(7) {
-   background-color: rgb(50, 117, 205);
-   width: 400px;
-   height: 300px;
-}
-.test div:nth-child(9) {
-   background-color: rgb(50, 117, 205);
-   width: 400px;
-   height: 300px;
-}
-.test div:nth-child(11) {
-   background-color: rgb(50, 117, 205);
-   width: 400px;
-   height: 300px;
+
+@media (max-width: 881px) {
+   .mainContainer {
+      display: flex;
+      flex-direction: column;
+   }
 }

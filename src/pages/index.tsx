@@ -1,14 +1,11 @@
-import Header from '../components/Header/Header'
+import { mainData } from '@/src/mainData'
 import Head from 'next/head'
-import Main from '../components/Main/Main'
-import { AppProps } from 'next/app'
+import { Address } from '../components/Address/Address'
+import { Header } from '../components/Header/Header'
+import { Main } from '../components/Main/Main'
+import { MyLink } from '../components/MyLink/MyLink'
 
-export interface TestProps {
-   activeItem: string
-   setActiveItem: Function
-}
-
-export default function Home(props: TestProps) {
+export default function Home() {
 
    return (
       <>
@@ -18,8 +15,13 @@ export default function Home(props: TestProps) {
             <meta name='viewport' content='width=device-width, initial-scale=1' />
             <link rel='icon' href='./favicon.svg' />
          </Head>
-         <Header activeItem={props.activeItem} />
-         <Main activeItem={props.activeItem} setActiveItem={props.setActiveItem} />
+         <Header />
+         <Main mainData={mainData} />
+         <Address>
+            <MyLink href='https://t.me/mifaress' color='beta'>Telegram</MyLink>
+            <MyLink href='mailto:9803211@gmail.com' color='beta'>Email</MyLink>
+            {/* <Image src='/images/telegram-icon.svg' width={40} height={40} alt='telegram icon' /> */}
+         </Address>
       </>
    )
 }

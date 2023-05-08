@@ -1,0 +1,9 @@
+.projectShowHideButton {
+   font-size: 1rem;
+   color: rgb(var(--gamma-c));
+   cursor: pointer;
+   opacity: 0.8;
+   position: absolute;
+   bottom: 0;
+   right: 0;
+}

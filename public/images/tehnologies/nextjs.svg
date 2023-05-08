@@ -1,0 +1,45 @@
+<svg width='500' height='500' fill='none' xmlns='http://www.w3.org/2000/svg'>
+  <mask
+     id='mask'
+     style='mask-type:alpha'
+     maskUnits='userSpaceOnUse'
+     x='0'
+     y='0'
+     width='500'
+     height='500'
+  >
+     <circle cx='250' cy='250' r='250' fill='#000' />
+  </mask>
+  <g mask='url(#mask)'>
+     <circle cx='250' cy='250' r='232' fill='#000' stroke='#000' stroke-width='16' />
+     <path
+        d='M398.687 433.791L145.876 142.8H116.8V356.2H143.654V192.036L377.775 471.918C383.554 467.312 389.25 462.587 394.683 457.804L398.687 454.466V433.791Z'
+        fill='url(#gradient0)'
+     />
+     <rect x='306.667' y='142.8' width='32' height='192' fill='url(#gradient1)' />
+  </g>
+  <defs>
+     <linearGradient
+        id='gradient0'
+        x1='233.066'
+        y1='323.866'
+        x2='385.332'
+        y2='416'
+        gradientUnits='userSpaceOnUse'
+     >
+        <stop stop-color='#fff' />
+        <stop offset='1' stop-color='#fff' stop-opacity='0' />
+     </linearGradient>
+     <linearGradient
+        id='gradient1'
+        x1='322.667'
+        y1='142.8'
+        x2='322.132'
+        y2='285.001'
+        gradientUnits='userSpaceOnUse'
+     >
+        <stop stop-color='#fff' />
+        <stop offset='1' stop-color='#fff' stop-opacity='0' />
+     </linearGradient>
+  </defs>
+</svg>

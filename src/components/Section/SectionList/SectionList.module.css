@@ -1,0 +1,9 @@
+.sectionList {
+	list-style: revert;
+	list-style-position: inside;
+	margin-top: 12px;
+	line-height: 1.2;
+}
+.sectionItem {
+	margin-left: 10px;
+}

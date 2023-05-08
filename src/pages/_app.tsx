@@ -2,7 +2,6 @@ import '@/src/styles/globals.css'
 import '@/src/styles/reset.css'
 import type { AppProps } from 'next/app'
 import FuturaPT from 'next/font/local'
-import { useState } from 'react'
 
 const FUTURA_PT = FuturaPT({
    src: [
@@ -12,8 +11,8 @@ const FUTURA_PT = FuturaPT({
          style: 'normal',
       },
       {
-         path: '../../public/fonts/FuturaPT-Medium.woff2',
-         weight: '500',
+         path: '../../public/fonts/FuturaPT-Demi.woff2',
+         weight: '600',
          style: 'normal',
       },
       {
@@ -21,22 +20,14 @@ const FUTURA_PT = FuturaPT({
          weight: '700',
          style: 'normal',
       },
-      {
-         path: '../../public/fonts/FuturaPT-ExtraBold.woff2',
-         weight: '800',
-         style: 'normal',
-      },
    ],
 })
 
 export default function App({ Component, pageProps }: AppProps) {
 
-   const [activeItem, setActiveItem] = useState('');
-
-
    return (
       <div className={['wrapper', FUTURA_PT.className].join(' ')}>
-         <Component {...pageProps} activeItem={activeItem} setActiveItem={setActiveItem} />
+         <Component {...pageProps} />
       </div>
    )
 }
