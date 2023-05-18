@@ -6,6 +6,8 @@
    --gamma-c: 216, 167, 4;
 
    --alpha-channel-c: 0.5;
+
+   --transition-theme-time: .75s;
 }
 
 [class*="Container"] {
@@ -14,8 +16,19 @@
    padding: 0 0.9375rem;
 }
 
+/* ========== Theme Switcher ========== */
+html[data-theme='light'] {
+   color-scheme: light;
+   --general-background-c: 245, 245, 245;
+   --alpha-c: 20, 20, 20;
+   --beta-c: 2, 74, 76;
+   --gamma-c: 176, 120, 14;
+}
+/* ========== Theme Switcher End ========== */
+
 body {
    background-color: rgb(var(--general-background-c));
+   transition: background-color var(--transition-theme-time);
    font-size: 1.5rem;
    line-height: 1.3;
    letter-spacing: 0.4px;

@@ -1,34 +1,52 @@
+import { SectionProjectBlockPropsType } from '@/src/Types/PropsTypes'
 import { useRef, useState } from 'react'
 import { Project } from './Project/Project'
 import s from './SectionProjectBlock.module.css'
 
-export const SectionProjectBlock = ({ sliderData }) => {
-   const projectsContainer = useRef(null)
+export const SectionProjectBlock = ({ sliderData }: SectionProjectBlockPropsType) => {
+   const projectsContainer = useRef<HTMLDivElement | null>(null)
    let currentPos = 0
 
-   function moveSlider(button) {
-      const slider = projectsContainer.current
-      if (slider == null) return
+   function moveSlider(e: React.MouseEvent<HTMLButtonElement, MouseEvent>, direction: string) {
+      const slider = projectsContainer.current!
       const gap = slider.offsetWidth * 0.02
-      const sliderItemWidth = slider.children[0].offsetWidth + gap
+      const sliderItemWidth = (slider.children[0] as HTMLElement).offsetWidth + gap
 
-      if (button === 'right') {
+      if (direction === 'right') {
+         const rightButton = e.currentTarget
+         const leftButton = rightButton.previousElementSibling as HTMLButtonElement
+         leftButton.style.borderColor = 'rgb(var(--gamma-c))'
+
+         if (Math.abs(currentPos / sliderItemWidth) + 3 == slider.children.length - 1) {
+            rightButton.style.borderColor = 'gray'
+         }
+         if (Math.abs(currentPos / sliderItemWidth) + 3 == slider.children.length) return
          currentPos -= sliderItemWidth
 
-         if (Math.abs(currentPos / sliderItemWidth) + 3 == slider.children.length + 1) currentPos = 0
-
+         // if (Math.abs(currentPos / sliderItemWidth) + 3 == slider.children.length + 1) currentPos = 0
          slider.style.transform = `translate(${currentPos}px)`
+
       } else {
+         const leftButton = e.currentTarget
+         const rightButton = leftButton.nextElementSibling as HTMLButtonElement
+         rightButton.style.borderColor = 'rgb(var(--gamma-c))'
+         if (currentPos / sliderItemWidth == -1) {
+            leftButton.style.borderColor = 'gray'
+         }
+         if (currentPos == 0) return
+         // if ((currentPos / sliderItemWidth) + 3 == slider.children.length - 1) {
+         //    e.currentTarget.style.borderColor = 'gray'
+         // }
          currentPos += sliderItemWidth
 
-         if (currentPos == sliderItemWidth) currentPos = -((slider.children.length - 3) * sliderItemWidth)
+         // if (currentPos == sliderItemWidth) currentPos = -((slider.children.length - 3) * sliderItemWidth)
 
          slider.style.transform = `translate(${currentPos}px)`
       }
    }
 
-   const [isMouseDown, setIsMouseDown] = useState(false)
-   const [distance, setDistance] = useState({ before: 0, after: 0 })
+   // const [isMouseDown, setIsMouseDown] = useState(false)
+   // const [distance, setDistance] = useState({ before: 0, after: 0 })
    // let before = 0
    // let after = 0
 
@@ -74,35 +92,8 @@ export const SectionProjectBlock = ({ sliderData }) => {
    return sliderData ? (
       <div className={s.mainWrapper}>
          <div className={s.projectsWrapper}>
-            <div
-               className={s.projects}
-               ref={projectsContainer}
-               // onMouseDown={onMouseDownHandler}
-               // onMouseMove={onMouseMoveHandler}
-               // onMouseUp={onMouseUpHandler}
-               // onTouchStart={onTouchStartHandler}
-               // onTouchMove={onTouchMoveHandler}
-            >
+            <div className={s.projects} ref={projectsContainer}>
                {sliderData.map(({ id, imageSrc, projectTitle, projectDescription, technologies, src }) => (
-                  // <div className={s.project} key={id}>
-                  // 	<div onMouseEnter={() => mouseEnterHandler(id)} onMouseLeave={() => mouseLeaveHandler(id)} className={s.wrapperImage}>
-                  // 		<Image className={s.projectImage} src={imageSrc} width={333} height={188} alt='' />
-                  // 		<Link className={s.projectLink} href={src} target='_blank'>{projectTitle}</Link>
-                  // 	</div>
-                  // 	{/* <div className={s.descriptionWrapper}> */}
-                  // 	<h3 className={s.projectTitle}>{projectTitle}</h3>
-                  // 	{isSmallScreen ? <p className={s.projectDescription}>{projectDescription}</p> : <ShowHideFullText text={projectDescription} />}
-                  // 	{/* </p> */}
-                  // 	<ol className={s.projectTechnologies}>
-                  // 		{technologies.map(item =>
-                  // 			<li key={item.id}>
-                  // 				{item.technology}
-                  // 			</li>
-                  // 		)}
-                  // 	</ol>
-                  // 	{/* </div> */}
-                  // </div>
-
                   <Project
                      key={id}
                      id={id}
@@ -115,8 +106,12 @@ export const SectionProjectBlock = ({ sliderData }) => {
                ))}
             </div>
          </div>
-         <button onClick={() => moveSlider('left')} className={[s.arrow, s.arrowLeft].join(' ')}></button>
-         <button onClick={() => moveSlider('right')} className={[s.arrow, s.arrowRight].join(' ')}></button>
+         <button
+            style={{borderColor: 'gray'}}
+            onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => moveSlider(e, 'left')}
+            className={[s.arrow, s.arrowLeft].join(' ')}
+         ></button>
+         <button onClick={e => moveSlider(e, 'right')} className={[s.arrow, s.arrowRight].join(' ')}></button>
       </div>
    ) : (
       <></>

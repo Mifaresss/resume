@@ -8,8 +8,7 @@ export const SectionImageBlock = ({ images }: SectionImageBlockPropsType) =>
       <ul className={s.list}>
          {images.map(({ id, src }) => (
             <li className={s.listItem} key={id}>
-               {/* <Image className={s.image} src={src} width={120} height={120} alt='' /> */}
-               <img className={s.image} src={src} width='120' height='120' alt='' />
+               <Image className={s.image} src={src} width={110} height={110} alt='' />
             </li>
          ))}
       </ul>

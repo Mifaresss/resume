@@ -1,7 +1,7 @@
 .descriptionBlock {
 	position: relative;
 	flex: 1 1 auto;
-	font-size: calc(18px + 3.5 * ((100vw - 320px) / (1280 - 320)));
+	font-size: calc(18px + 2 * ((100vw - 320px) / (1280 - 320)));
    letter-spacing: 0.2px;
    transition: all 0.3s;
 }

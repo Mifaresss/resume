@@ -3,7 +3,7 @@ import s from './ShowHideFullText.module.css'
 
 export const ShowHideFullText = ({ text }: { text: string }) => {
 
-	const [maxTextLength, setMaxTextLength] = useState(50)
+	const [maxTextLength, setMaxTextLength] = useState(55)
 
 	useEffect(() => {
 
@@ -11,7 +11,7 @@ export const ShowHideFullText = ({ text }: { text: string }) => {
 			if (window.innerWidth <= 1014) {
 				setMaxTextLength(47)
 			} else {
-				setMaxTextLength(50)
+				setMaxTextLength(55)
 			}
 		}
 		changeMaxTextLength()
@@ -42,7 +42,7 @@ export const ShowHideFullText = ({ text }: { text: string }) => {
 		} else if (text1.length >= maxTextLength && toggle === false) {
 			return text1 + ' Technologies:'
 		} else {
-			return text.slice(0, 63).concat('...')
+			return text.slice(0, 71).concat('...')
 		}
 	}
 	const showHideButtonStyle = {
@@ -83,7 +83,7 @@ export const ShowHideFullText = ({ text }: { text: string }) => {
 			<div className={s.descriptionBlock} style={text.length < maxTextLength ? {} : {gridTemplateRows: '0fr'}}>
 				<p>{showText(text, test)}</p>
 			{text.length > maxTextLength ?
-				<button style={!test ? showHideButtonStyle : { bottom: maxTextLength < 50 ? '-13px' : '0' }} className={s.projectShowHideButton} onClick={testFunc}>
+				<button style={!test ? showHideButtonStyle : { bottom: maxTextLength < 55 ? '-13px' : '0' }} className={s.projectShowHideButton} onClick={testFunc}>
 					{test ? 'Show all' : 'Hide'}
 				</button>
 				:

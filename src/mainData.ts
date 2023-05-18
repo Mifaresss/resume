@@ -6,7 +6,7 @@ export const mainData: MainPropsType['mainData'] = [
       title: 'About me',
       description: `I am ${
          new Date().getFullYear() - 2002
-      } years old and have completed vocational education in "Computer Engineering", but in reality, I am a frontend developer. I started studying web development intensively about a year ago, and during this time, I have become rooted in my choice, and I really enjoy frontend development. Additionally, I am a perfectionist by nature, and as a result, I love writing proper, clean, and beautiful code. I strive to follow general programming principles such as SOLID, KISS, and DRY.`,
+      } years old. Frontend developer with a degree in Computer Engineering. During my 12-month web development intensive course, frontend development became my key focus and main area of interest. Additionally, being a lifelong perfectionist, I aim to write clean, reliable,  efficient code even in a time pressured environment. I strive to follow general programming principles such as SOLID, KISS, and DRY.`,
    },
    {
       id: 2,
@@ -14,12 +14,12 @@ export const mainData: MainPropsType['mainData'] = [
       description:
          'Here are the main technologies I am proficient in (without various additional ones such as Sass, Git, etc.):',
       images: [
-         { id: 1, src: '/images/html.svg' },
-         { id: 2, src: '/images/css.svg' },
-         { id: 3, src: '/images/javascript.svg' },
-         { id: 4, src: '/images/react.svg' },
-         { id: 5, src: '/images/nextjs.svg' },
-         { id: 6, src: '/images/ts.svg' },
+         { id: 1, src: '/images/technologies/html.svg' },
+         { id: 2, src: '/images/technologies/css.svg' },
+         { id: 3, src: '/images/technologies/javascript.svg' },
+         { id: 4, src: '/images/technologies/react.svg' },
+         { id: 5, src: '/images/technologies/nextjs.svg' },
+         { id: 6, src: '/images/technologies/ts.svg' },
       ],
    },
    {
@@ -42,7 +42,7 @@ export const mainData: MainPropsType['mainData'] = [
          { id: 2, skill: 'Teamwork' },
          { id: 3, skill: 'Communication' },
          { id: 4, skill: 'Empathy' },
-         { id: 5, skill: 'Responsibility' },
+         { id: 5, skill: 'Reliability' },
          { id: 6, skill: 'Time management' },
       ],
    },
@@ -53,7 +53,7 @@ export const mainData: MainPropsType['mainData'] = [
       sliderData: [
          {
             id: 1,
-            imageSrc: '/images/todo-list.jpg',
+            imageSrc: '/images/projects/todo-list.jpg',
             projectTitle: 'Todo List',
             projectDescription: 'This is my version of a React-based Todo list.',
             technologies: [
@@ -64,7 +64,7 @@ export const mainData: MainPropsType['mainData'] = [
          },
          {
             id: 2,
-            imageSrc: '/images/friends-app.jpg',
+            imageSrc: '/images/projects/friends-app.jpg',
             projectTitle: 'Friends App',
             projectDescription:
                'This is a simple social app that allows find, filter and sort users by various parameters.',
@@ -76,7 +76,7 @@ export const mainData: MainPropsType['mainData'] = [
          },
          {
             id: 3,
-            imageSrc: '/images/memory-game.jpg',
+            imageSrc: '/images/projects/memory-game.jpg',
             projectTitle: 'Memory Game',
             projectDescription: 'Above is a memory game with a theme switching feature.',
             technologies: [
@@ -87,7 +87,7 @@ export const mainData: MainPropsType['mainData'] = [
          },
          {
             id: 4,
-            imageSrc: '/images/form.jpg',
+            imageSrc: '/images/projects/form.jpg',
             projectTitle: 'Translate doc (form)',
             projectDescription:
                'This is an HTML form application where I paid special attention to a11y (accessibility).',
@@ -100,22 +100,3 @@ export const mainData: MainPropsType['mainData'] = [
       ],
    },
 ]
-
-// export function toggleGifAnimation(id: number) {
-//    const index = id - 1
-//    mainData[5].sliderData[index].imageSrc.includes('.gif')
-//       ? (mainData[5].sliderData[index].imageSrc = mainData[5].sliderData[index].imageSrc.replace('.gif', '.jpg'))
-//       : (mainData[5].sliderData[index].imageSrc = mainData[5].sliderData[index].imageSrc.replace('.jpg', '.gif'))
-// }
-// function changeDataImagesToJPG() {
-//    if (mainData[5].sliderData[0].imageSrc.includes('.gif')) {
-//       mainData[5].sliderData?.forEach(item => {
-//          item.imageSrc = item.imageSrc.replace('.gif', '.jpg')
-//       })
-//    } else {
-//       mainData[5].sliderData?.forEach(item => {
-//          item.imageSrc = item.imageSrc.replace('.jpg', '.gif')
-//       })
-//    }
-// }
-// changeDataImagesToJPG()

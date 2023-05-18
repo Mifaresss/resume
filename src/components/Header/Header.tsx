@@ -1,8 +1,9 @@
 import myFoto from '@/public/images/avatar.jpg'
 import Image from 'next/image'
+import { ReactElement } from 'react'
 import s from './Header.module.css'
 
-export const Header = () =>
+export const Header = ({ children }: { children: ReactElement }) =>
 
    <header className={s.header}>
       <div className={s.headerContainer}>
@@ -15,4 +16,5 @@ export const Header = () =>
             <p className={s.description}></p>
          </div>
       </div>
+      {children}
    </header>

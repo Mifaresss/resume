@@ -1,6 +1,6 @@
 .mainContainer {
-   padding-top: calc(40px + 16 * ((100vw - 320px) / (1280 - 320)));
-   padding-bottom: 8rem;
+   padding-top: calc(2.5rem + 16 * ((100vw - 320px) / (1280 - 320)));
+   padding-bottom: 6.5rem;
    display: grid;
    grid-template: auto / 47% 45%;
    justify-content: space-between;

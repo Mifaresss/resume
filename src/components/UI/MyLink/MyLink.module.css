@@ -1,6 +1,7 @@
 .myLink {
    transition: all 0.2s;
    position: relative;
+   transition: color var(--transition-theme-time);
 }
 .myLink::after {
    content: '';
